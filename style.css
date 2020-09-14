@@ -1,3 +1,47 @@
-/* CSS Style Sheet */ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    position: relative;
+}
+.burger{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.burger div{
+    height: 5px;
+    width: 30px;
+    background: blue;
+    margin-bottom: 5px;
+
+}
+nav{
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    display: none;
+}
+nav li{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+.welcome{
+    display:flex;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+.name{
+    margin: 80px auto 50px;
+}
 
 
