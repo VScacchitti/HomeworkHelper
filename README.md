@@ -11,11 +11,11 @@ Rebecca
  >Homework Planner
         
         
-// Description
+## Description
     A weekly school planner and workspace for simple text editing and math computations. Comes with cat or dog theme with backgrounds, colors, and themed facts. 
 
 
-// User story 
+## User story 
     As a student
     I want to do english homework, math homework, and plan for the week in one place. 
     so that
