@@ -5,70 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math</title>
 
-    <!-- Link to Style Sheet & Javascript file-->
-    <link rel="stylesheet" href="style.css">
-    <link rel="javascript" href="script.js">
-
-    <!-- Link to AJAX-->
+    <!-- Link to Mini CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
-    <!-- Link to Minimum a CSS style sheet-->
-    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
-
-    <!-- Added link to the jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <!-- Added a link to Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Link to Style Sheet-->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-    <div class="wrapper container">
-        <div class="burger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./math.html"></a></li>
-                <li><a href="./english.html">English</a></li>
-            </ul>
-        </nav>
-
+  <div class="wrapper">
+    <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./math.html">Math</a></li>
+            <li><a href="./english.html">English</a></li>
+        </ul>
+    </nav>
 
+        <!-- Calculator Card -->
+        <div class="container">
+          <div id="calcBlock" class="col-lg-4">
+            <div class="card">
+              <h3 class="card-header">Calculator</h3>
 
-      <!-- Calculator Card -->
-      <div id="calcBlock" class="col-lg-4">
-        <div class="card">
-          <h3 class="card-header">Calculator</h3>
-
-          <div class="card-body">
-            <button id="button-1" class="btn btn-primary number" value="1"><span>1</span></button>
-            <button id="button-2" class="btn btn-primary number" value="2"><span>2</span></button>
-            <button id="button-3" class="btn btn-primary number" value="3"><span>3</span></button>
-            <button id="button-plus" class="btn btn-danger operator" value="plus"><span>+</span></button>
-            <br><br>
-            <button id="button-4" class="btn btn-primary number" value="4"><span>4</span></button>
-            <button id="button-5" class="btn btn-primary number" value="5"><span>5</span></button>
-            <button id="button-6" class="btn btn-primary number" value="6"><span>6</span></button>
-            <button id="button-minus" class="btn btn-danger operator" value="minus"><span>&minus;</span></button>
-            <br><br>
-            <button id="button-7" class="btn btn-primary number" value="7"><span>7</span></button>
-            <button id="button-8" class="btn btn-primary number" value="8"><span>8</span></button>
-            <button id="button-9" class="btn btn-primary number" value="9"><span>9</span></button>
-            <button id="button-multiply" class="btn btn-danger operator" value="times"><span>&times;</span></button>
-            <br><br>
-            <button id="button-0" class="btn btn-primary number" value="0"><span>0</span></button>
-            <button id="button-divide" class="btn btn-danger operator" value="divide"><span>&divide;</span></button>
-            <button id="button-power" class="btn btn-danger operator" value="power"><span>^</span></button>
-            <button id="button-equal" class="btn btn-success equal" value="equals"><span>=</span></button>
-            <br><br>
-            <button id="button-clear" class="btn btn-dark clear" value="clear"><span>clear</span></button>
+              <div class="card-body">
+                <button id="button-1" class="btn btn-primary number" value="1"><span>1</span></button>
+                <button id="button-2" class="btn btn-primary number" value="2"><span>2</span></button>
+                <button id="button-3" class="btn btn-primary number" value="3"><span>3</span></button>
+                <button id="button-plus" class="btn btn-danger operator" value="plus"><span>+</span></button>
+                <br><br>
+                <button id="button-4" class="btn btn-primary number" value="4"><span>4</span></button>
+                <button id="button-5" class="btn btn-primary number" value="5"><span>5</span></button>
+                <button id="button-6" class="btn btn-primary number" value="6"><span>6</span></button>
+                <button id="button-minus" class="btn btn-danger operator" value="minus"><span>&minus;</span></button>
+                <br><br>
+                <button id="button-7" class="btn btn-primary number" value="7"><span>7</span></button>
+                <button id="button-8" class="btn btn-primary number" value="8"><span>8</span></button>
+                <button id="button-9" class="btn btn-primary number" value="9"><span>9</span></button>
+                <button id="button-multiply" class="btn btn-danger operator" value="times"><span>&times;</span></button>
+                <br><br>
+                <button id="button-0" class="btn btn-primary number" value="0"><span>0</span></button>
+                <button id="button-divide" class="btn btn-danger operator" value="divide"><span>&divide;</span></button>
+                <button id="button-power" class="btn btn-danger operator" value="power"><span>^</span></button>
+                <button id="button-equal" class="btn btn-success equal" value="equals"><span>=</span></button>
+                <br><br>
+                <button id="button-clear" class="btn btn-dark clear" value="clear"><span>clear</span></button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
       <!-- Result Card -->
       <div class="col-lg-6">
@@ -83,17 +73,13 @@
           </div>
         </div>
       </div>
+
     </div>
-  </div>
+    </div>
 
-
-
-
-
-
-
-
-
-
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Link to Javascript file -->
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

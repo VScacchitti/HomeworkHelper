@@ -3,38 +3,49 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-    /* navbar */ 
-    .wrapper{
-        position: relative;
-    }
-    .burger{
-        position: absolute;
-        top: 30px;
-        left: 30px;
-    }
-    .burger div{
-        height: 5px;
-        width: 30px;
-        background: blue;
-        margin-bottom: 5px;
-
-    }
-    nav{
-        position: absolute;
-        top: 60px;
-        left: 30px;
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        background: black;
-        /* display: none; */
-    }
-    nav li{
-        list-style: none;
-        text-decoration: none;
-        color: white;
-    }
+.wrapper{
+    position: relative;
+}
+/* navbar */ 
+.burger{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    cursor: pointer;
+}
+.burger div{
+    height: 5px;
+    width: 30px;
+    background: blue;
+    margin-bottom: 5px;
+}
+.nav{
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    transform: translateX(-150%);
+    transition: transform 0.5s ease-in;
+}
+.nav-active{
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    transform: translateX(0%);
+}
+.nav li,
+.nav-active li{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
 
 /* welcome on planner page */ 
 .welcome{
