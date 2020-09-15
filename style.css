@@ -3,36 +3,40 @@
     padding: 0;
     box-sizing: border-box;
 }
-.wrapper{
-    position: relative;
-}
-.burger{
-    position: absolute;
-    top: 30px;
-    left: 30px;
-}
-.burger div{
-    height: 5px;
-    width: 30px;
-    background: blue;
-    margin-bottom: 5px;
 
-}
-nav{
-    position: absolute;
-    top: 60px;
-    left: 30px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    background: black;
-    /* display: none; */
-}
-nav li{
-    list-style: none;
-    text-decoration: none;
-    color: white;
-}
+    /* navbar */ 
+    .wrapper{
+        position: relative;
+    }
+    .burger{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .burger div{
+        height: 5px;
+        width: 30px;
+        background: blue;
+        margin-bottom: 5px;
+
+    }
+    nav{
+        position: absolute;
+        top: 60px;
+        left: 30px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        background: black;
+        /* display: none; */
+    }
+    nav li{
+        list-style: none;
+        text-decoration: none;
+        color: white;
+    }
+
+/* welcome on planner page */ 
 .welcome{
     display:flex;
     flex-direction: column;
@@ -40,6 +44,8 @@ nav li{
     justify-content: center;
     align-items: center;
 }
+
+/* User's name on planner page*/ 
 .name{
     margin: 80px auto 50px;
 }
