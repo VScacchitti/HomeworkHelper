@@ -1,45 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>English</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
-    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="engstyle.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css"
+    />
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="engstyle.css" />
+  </head>
+  <body>
     <!-- Wraps the entire page so you can add styling to this class -->
     <div class="wrapper">
-        <!-- Nav Bar -->
-        <div class="burger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <nav class="nav">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./math.html">Math</a></li>
-                <li><a href="./english.html">English</a></li>
-            </ul>
-        </nav>
-        <!-- End Nav Bar -->
-        <div class="form-wrapper">
-            <form class="english-form">
-                <div class="title">
-                    <input type="text" placeholder="Title goes here" name="title" id="english-title">
-                    <textarea name="englishBody" id="english-body" cols="30" rows="10" placeholder="Body goes here"></textarea>
-                    <input type="submit">
-                </div>
-            </form>
-        </div>
+      <!-- Nav Bar -->
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./math.html">Math</a></li>
+          <li><a href="./english.html">English</a></li>
+        </ul>
+      </nav>
+      <!-- End Nav Bar -->
+      <div class="form-wrapper">
+        <form class="english-form">
+          <div class="title">
+            <input
+              type="text"
+              placeholder="Title goes here"
+              name="title"
+              id="english-title"
+            />
+
+            <textarea
+              name="englishBody"
+              id="english-body"
+              cols="30"
+              rows="10"
+              placeholder="Body goes here"
+            ></textarea>
+            <input type="submit" />
+          </div>
+          <div class="dictionary">
+            <input
+              type="text"
+              placeholder="Get Definition"
+              name="title"
+              id="dictionary"
+            />
+          </div>
+        </form>
+      </div>
     </div>
 
     <!-- Added link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Link to Javascript file -->
-    <script type="text/javascript" src="script.js"></script>
-</body>
+    <script type="text/javascript" src="english.js"></script>
+  </body>
 </html>
