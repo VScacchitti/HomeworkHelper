@@ -62,9 +62,36 @@
 }
 
 
+
+
+
+        /* MATH PAGE */ 
+
+#mathPage{
+    background-color: black;
+}        
+#calcResultBox {
+    background-color: black;
+    color: blueviolet;
+}
+
+#mathNavBar {
+    --drawer-back-color: black;
+    --nav-border-color: chartreuse;
+}
+
 /* Calculator Styling */
 .card-body{
     background: #000;
+    outline-style: dotted;
+    outline-color: chartreuse;
+}
+.card {
+    background-color: black;
+}
+.card-header {
+    background-color: black;
+    color: blueviolet;
 }
 .number{
     border: solid 1px #22dfdf;
