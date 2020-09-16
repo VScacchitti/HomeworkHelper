@@ -4,37 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Draw</title>
-    <link rel="stylesheet" href="draw.css" />
+    <!-- Link to Mini CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    <link rel="stylesheet" href="draw.css">
   </head>
   <body>
-    <div class="container">
+    <!-- Nav Bar -->
+    <div class="burger">
+      <div></div>
+      <div></div>
+      <div></div>
+  </div>
+  <nav class="nav">
+      <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./math.html">Math</a></li>
+          <li><a href="./english.html">English</a></li>
+          <li><a href="./draw.html">Draw</a></li>
+      </ul>
+  </nav>
+  <!-- End Nav Bar -->
+
+    <div class="draw-container">
         <!--Canvas elements-->
         <canvas id="canvas" width="800" height="600"></canvas>
         <!--Button/Lable Elements-->
   
           <div class="controls">
-            <label id="blackButton"
-              ><button id="black">O</button> Black</label
-            >
-  
-            <label id="greenButton"
-              ><button id="green">O</button>Green</label
-            >
-            <label id="blueButton"
-              ><button id="blue">O</button>Blue</label
-            >
-            <label id="yellowButton"
-              ><button id="yellow">O</button>Yellow</label
-            >
-            <label id="redButton"
-            ><button id="red">O</button>Red</label
-          >
-            <label id="purpleButton"
-              ><button id="purple">O</button>Purple</label
-            >
+            <label id="blackButton"><button id="black">O</button> Black</label>
+            <label id="greenButton"><button id="green">O</button>Green</label>
+            <label id="blueButton"><button id="blue">O</button>Blue</label>
+            <label id="yellowButton"><button id="yellow">O</button>Yellow</label>
+            <label id="redButton"><button id="red">O</button>Red</label>
+            <label id="purpleButton"><button id="purple">O</button>Purple</label>
             <label id="eraseButton"><button id="erase">O</button>Erase</label>
             <label id="clearButton"><button id="clear">X</button> Clear</label>
           </div>
-    <script src="draw.js"></script>
+    </div>
+    <!-- Link to jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Link to Javascript file -->
+    <script type="text/javascript" src="draw.js"></script>
   </body>
 </html>
