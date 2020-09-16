@@ -72,3 +72,10 @@ function clearCanvas(img, ctx, img_scaled_width, img_scaled_height) {
   ctx.clearRect(0, 0, img_scaled_width, img_scaled_height);
   drawImageToScale(img, ctx);
 }
+
+
+/* Nav Transition*/
+$(".burger").on("click", ()=>{
+  $(".nav").toggleClass("nav-active");
+});
+/* End Nav Transition*/
