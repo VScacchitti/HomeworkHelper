@@ -1,0 +1,33 @@
+.form-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.english-form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    margin: auto auto;
+    /* I left the background blue so you know where to change it */
+    background: blue;
+}
+.title{
+    text-align: center;
+}
+#english-tile{
+    display: flex;
+    margin: 0 auto;
+}
+#english-body{
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+}
+.title input,
+.title textarea{
+    width: 90%;
+}

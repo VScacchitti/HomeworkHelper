@@ -13,25 +13,23 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body id="mathPage">
-
-<!-- New Nav Bar-->
-  
-  <label for="drawer-control" class="drawer-toggle"></label>
-
-    <input type="checkbox" id="drawer-control" class="drawer">
-    <div id="mathNavBar">
-      <label for="drawer-control" class="drawer-close"></label>
-      <a href="./index.html" class="tertiary">Home</a>
-      <a href="./math.html">Math</a>
-      <a href="./english.html">English</a>
+<body>
+  <div class="wrapper">
+    <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
- 
- 
-
+    <nav class="nav">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./math.html">Math</a></li>
+            <li><a href="./english.html">English</a></li>
+        </ul>
+    </nav>
 
         <!-- Calculator Card -->
-        <div class="container row">
+        <div class="container">
           <div id="calcBlock" class="col-lg-4">
             <div class="card">
               <h3 class="card-header">Calculator</h3>
@@ -66,7 +64,7 @@
       <div class="col-lg-6">
         <div class="card">
           <h3 class="card-header">Result</h3>
-          <div id="calcResultBox" class="card-body">
+          <div class="card-body">
             <h1 id="first-number"></h1>
             <h1 id="operator"></h1>
             <h1 id="second-number"></h1>
