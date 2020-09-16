@@ -14,7 +14,8 @@
 
 </head>
 <body>
-    <div class="wrapper">
+    <div class="index-overlay"></div>
+        <!-- Nav Bar -->
         <div class="burger">
             <div></div>
             <div></div>
@@ -25,18 +26,27 @@
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./math.html">Math</a></li>
                 <li><a href="./english.html">English</a></li>
+                <li><a href="./draw.html">Draw</a></li>
             </ul>
         </nav>
+        <!-- End Nav Bar -->
         <div class="welcome">
-            <div>cat image here</div>
             <div class="name">
-                <h1>Welcome, <span>Name</span>!</h1>
+                <h1>Welcome!</h1>
+                <h5>Today is: <span id="todays-date">DATE</span></h5>
             </div>
-            <p>Cat random fact here</p>
-            <hr/>
+            
         </div>
-        <div class="container calendar">
-            <div class="row">
+        <div class="week-of-wrapper">
+            <div class="week-of">
+                <span>Week Of</span>
+                <br>
+                <h4 id="week-range">9/14/2020 - 9/18/2020</h4>
+            </div>
+        </div>
+        <!-- Calendar Section -->
+        <div class="container calendar-wrapper">
+            <div class="row calendar">
                 <div class="col-sm-2 weekdays" id="day1">
                     <div class="day">Monday</div>
                     <textarea>Type here</textarea>
@@ -64,11 +74,16 @@
                 </div>
             </div>
         </div>
+        <!-- End Calendar Section -->
 
-    </div>
 
-    <!-- Added link to the jQuery Library -->
+
+
+
+    <!-- Link to jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Link to Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <!-- Link to Javascript file -->
     <script type="text/javascript" src="script.js"></script>
 </body>
