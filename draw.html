@@ -4,29 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Draw</title>
-    <!-- Link to Mini CSS-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    <!-- Link to Materialize Icons and CSS-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Link to Stylesheet -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./Style/draw.css">
 
     <link rel="shortcut icon" href="assets/art-favicon.ico" type="image/x-icon">
 
   </head>
   <body>
-    <!-- Nav Bar -->
-    <div class="burger">
-      <div></div>
-      <div></div>
-      <div></div>
-  </div>
-  <nav class="nav">
-      <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./math.html">Math</a></li>
-          <li><a href="./english.html">English</a></li>
-          <li><a href="./draw.html">Draw</a></li>
-      </ul>
-  </nav>
-  <!-- End Nav Bar -->
+    <!-- Materialize Nav Bar -->
+    <div class="container">
+      <div class="fixed-action-btn top">
+          <a class="btn-floating btn-large red">
+            <i class="large material-icons">mode_edit</i>
+          </a>
+          <ul>
+            <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+            <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+            <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+            <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- End Materialize Nav Bar -->
 
     <div>
         <!--Canvas elements-->
@@ -44,9 +47,23 @@
             <label id="clearButton"><button id="clear">X</button> Clear</label>
           </div>
     </div>
+
+    <!-- Link to Materialize Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Link to jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Link to Javascript file -->
     <script type="text/javascript" src="./Develop/draw.js"></script>
+
+    <!-- Initialize Materialize -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.fixed-action-btn');
+          var instances = M.FloatingActionButton.init(elems, {
+              direction: 'right',
+              hoverEnabled: false
+          });
+      });
+      </script>
   </body>
 </html>
