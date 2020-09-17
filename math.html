@@ -21,14 +21,14 @@
     <!-- Materialize Nav Bar -->
     <div class="container">
       <div class="fixed-action-btn top">
-          <a class="btn-floating btn-large red">
-            <i class="large material-icons">mode_edit</i>
+          <a class="btn-floating btn-large deep-orange accent-3">
+            <i class="large material-icons">apps</i>
           </a>
           <ul>
-            <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-            <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-            <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-            <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+            <li><a href="draw.html" class="btn-floating purple darken-1"><i class="material-icons">brush</i></a></li>
+            <li><a href="math.html" class="btn-floating blue darken-1"><i class="material-icons">exposure</i></a></li>
+            <li><a href="english.html" class="btn-floating teal accent-4"><i class="material-icons">spellcheck</i></a></li>
+            <li><a href="index.html" class="btn-floating orange"><i class="material-icons">home</i></a></li>
           </ul>
         </div>
       </div>
@@ -90,15 +90,5 @@
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="./Develop/math.js"></script>
 
-    <!-- Initialize Materialize -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-         var elems = document.querySelectorAll('.fixed-action-btn');
-         var instances = M.FloatingActionButton.init(elems, {
-             direction: 'right',
-             hoverEnabled: false
-         });
-     });
-     </script>
 </body>
 </html>
