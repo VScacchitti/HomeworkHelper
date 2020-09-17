@@ -53,12 +53,20 @@
 
     </div>
 
-    <!-- Link to Materialize Javascript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- Added link to the jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Link to Javascript file -->
-    <script type="text/javascript" src="./Develop/english.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="./Develop/english.js""></script>
+     <!-- Link to jQuery Library -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+     <!-- Initialize Materialize Navbar -->
+     <script>
+        $(document).ready(function(){
+            $('.fixed-action-btn').floatingActionButton();
+        });
+    </script>
   </body>
 </html>
