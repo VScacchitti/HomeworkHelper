@@ -3,20 +3,25 @@
 Team Codename:
 
 Team Members:
-Joy
-Vincent
-Rebecca
+>Joy  
+>Vincent  
+>Rebecca  
 
 
  >Homework Planner
         
         
 ## Description
-    A weekly school planner and workspace for simple text editing and math computations. Comes with cat or dog theme with backgrounds, colors, and themed facts. 
+    >A digital trapper keeper; This website has 4 pages.   
+    The homepage/assignment calendar, a math page, an english page, and a drawing page.   
+    The homepage allows you to store daily tasks to local storage.   
+    The math page features a calulator to assist with math needs.  
+    The english page features a text editor which uses the API's Word Dictionary and Grammar Bot to spell check and grammar check.   
+    The drawing page has a canvas for drawing pictures. 
 
 
 ## User story 
-    As a student
-    I want to do english homework, math homework, and plan for the week in one place. 
-    so that
-        I can do my homework, keep track of assignments, and learn cat/dog facts all in once place. 
+    >As a student
+    >I want to have a digital homework desk
+    >so that
+        >I can use a calculator, write english assignments, draw, and keep track of assignments all in one place. 
