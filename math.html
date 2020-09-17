@@ -5,65 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math</title>
 
-    <!-- Link to Mini CSS-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
-    <!-- Added a link to Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Link to Materialize Icons and CSS-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Link to Style Sheet-->
+    <link rel="stylesheet" href="./Style/mathstyle.css">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="assets/math-favicon.ico" type="image/x-icon">
+
 
 </head>
 <body>
-  <div class="wrapper">
-    <div class="burger">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <nav class="nav">
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./math.html">Math</a></li>
-            <li><a href="./english.html">English</a></li>
-        </ul>
-    </nav>
+  <div class="math-wrapper">
+    <!-- Materialize Nav Bar -->
+    <div class="container">
+      <div class="fixed-action-btn top">
+          <a class="btn-floating btn-large red">
+            <i class="large material-icons">mode_edit</i>
+          </a>
+          <ul>
+            <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+            <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+            <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+            <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- End Materialize Nav Bar -->
 
+      <div class="container calculator">
         <!-- Calculator Card -->
-        <div class="container">
-          <div id="calcBlock" class="col-lg-4">
-            <div class="card">
-              <h3 class="card-header">Calculator</h3>
-
-              <div class="card-body">
-                <button id="button-1" class="btn number" value="1"><span>1</span></button>
-                <button id="button-2" class="btn number" value="2"><span>2</span></button>
-                <button id="button-3" class="btn number" value="3"><span>3</span></button>
-                <button id="button-plus" class="btn operator" value="plus"><span>+</span></button>
-                <br><br>
-                <button id="button-4" class="btn number" value="4"><span>4</span></button>
-                <button id="button-5" class="btn number" value="5"><span>5</span></button>
-                <button id="button-6" class="btn number" value="6"><span>6</span></button>
-                <button id="button-minus" class="btn operator" value="minus"><span>&minus;</span></button>
-                <br><br>
-                <button id="button-7" class="btn number" value="7"><span>7</span></button>
-                <button id="button-8" class="btn number" value="8"><span>8</span></button>
-                <button id="button-9" class="btn number" value="9"><span>9</span></button>
-                <button id="button-multiply" class="btn operator" value="times"><span>&times;</span></button>
-                <br><br>
-                <button id="button-0" class="btn number" value="0"><span>0</span></button>
-                <button id="button-divide" class="btn operator" value="divide"><span>&divide;</span></button>
-                <button id="button-power" class="btn operator" value="power"><span>^</span></button>
-                <button id="button-equal" class="btn equal" value="equals"><span>=</span></button>
-                <br><br>
-                <button id="button-clear" class="btn btn-dark clear" value="clear"><span>clear</span></button>
-              </div>
-            </div>
-          </div>
-
-      <!-- Result Card -->
-      <div class="col-lg-6">
         <div class="card">
-          <h3 class="card-header">Result</h3>
+          <div class="card-header text-center">
+              <div id="resultbox">123</div>
+          </div>
+          <div class="card-body text-center">
+            <button id="button-1" class="btn number" value="1"><span>1</span></button>
+            <button id="button-2" class="btn number" value="2"><span>2</span></button>
+            <button id="button-3" class="btn number" value="3"><span>3</span></button>
+            <button id="button-plus" class="btn operator" value="plus"><span>+</span></button>
+            <br><br>
+            <button id="button-4" class="btn number" value="4"><span>4</span></button>
+            <button id="button-5" class="btn number" value="5"><span>5</span></button>
+            <button id="button-6" class="btn number" value="6"><span>6</span></button>
+            <button id="button-minus" class="btn operator" value="minus"><span>&minus;</span></button>
+            <br><br>
+            <button id="button-7" class="btn number" value="7"><span>7</span></button>
+            <button id="button-8" class="btn number" value="8"><span>8</span></button>
+            <button id="button-9" class="btn number" value="9"><span>9</span></button>
+            <button id="button-multiply" class="btn operator" value="times"><span>&times;</span></button>
+            <br><br>
+            <button id="button-0" class="btn number" value="0"><span>0</span></button>
+            <button id="button-divide" class="btn operator" value="divide"><span>&divide;</span></button>
+            <button id="button-power" class="btn operator" value="power"><span>^</span></button>
+            <button id="button-equal" class="btn equal" value="equals"><span>=</span></button>
+            <br><br>
+            <button id="button-clear" class="btn btn-dark clear" value="clear"><span>clear</span></button>
+          </div>
+        </div>
+      <!-- Result Card -->
+      <div class="col">
+        <div class="card">
+          <h3 class="card-header text-center result-text">Result</h3>
           <div class="card-body">
             <h1 id="first-number"></h1>
             <h1 id="operator"></h1>
@@ -77,9 +81,24 @@
     </div>
     </div>
 
+    
+    <!-- Link to Materialize Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Added link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Link to Javascript file -->
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="./Develop/math.js"></script>
+
+    <!-- Initialize Materialize -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+         var elems = document.querySelectorAll('.fixed-action-btn');
+         var instances = M.FloatingActionButton.init(elems, {
+             direction: 'right',
+             hoverEnabled: false
+         });
+     });
+     </script>
 </body>
 </html>
