@@ -4,17 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>English</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css"
-    />
-    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css" />
+    <!-- Link to Materialize Icons and CSS-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Link to fontawesome -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
+    <!-- Link to Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./Style/engstyle.css">
 
@@ -22,54 +21,40 @@
 
   </head>
   <body>
-    <!-- Wraps the entire page so you can add styling to this class -->
-    <div class="wrapper">
-      <!-- Nav Bar -->
-      <div class="burger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <nav class="nav">
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./math.html">Math</a></li>
-          <li><a href="./english.html">English</a></li>
-          <li><a href="./draw.html">Draw</a></li>
-        </ul>
-      </nav>
-      <!-- End Nav Bar -->
+    <div class="english-wrapper">
+      <!-- Materialize Nav Bar -->
+      <div class="container">
+        <div class="fixed-action-btn top">
+            <a class="btn-floating btn-large deep-orange accent-3">
+              <i class="large material-icons">apps</i>
+            </a>
+            <ul>
+              <li><a href="draw.html" class="btn-floating purple darken-1"><i class="material-icons">brush</i></a></li>
+              <li><a href="math.html" class="btn-floating blue darken-1"><i class="material-icons">exposure</i></a></li>
+              <li><a href="english.html" class="btn-floating teal accent-4"><i class="material-icons">spellcheck</i></a></li>
+              <li><a href="index.html" class="btn-floating orange"><i class="material-icons">home</i></a></li>
+            </ul>
+          </div>
+        </div>
+    <!-- End Materialize Nav Bar -->
+
       <div class="form-wrapper">
         <form class="english-form">
           <div class="title">
-            <input
-              type="text"
-              placeholder="Title goes here"
-              name="title"
-              id="english-title"
-            />
-
-            <textarea
-              name="englishBody"
-              id="english-body"
-              cols="30"
-              rows="10"
-              placeholder="Body goes here"
-            ></textarea>
+            <input type="text" placeholder="Title goes here" name="title" id="english-title"/>
+            <textarea name="englishBody" id="english-body" cols="30" rows="10" placeholder="Body goes here"></textarea>
             <input type="submit" />
           </div>
           <div id="dictionary" class="dictionary">
-            <input
-              type="text"
-              placeholder="Get Definition"
-              name="dictionary"
-              id="input"
-            />
+            <input type="text" placeholder="Get Definition" name="dictionary" id="input"/>
           </div>
         </form>
       </div>
+
     </div>
 
+    <!-- Link to Materialize Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Added link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Link to Javascript file -->
