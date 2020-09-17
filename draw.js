@@ -39,13 +39,14 @@ window.addEventListener("load", () => {
   }
 
   function draw(e) {
+    console.log(e);
     if (!painting) return;
     ctx.lineWidth = 3;
     ctx.lineCap = "round";
-    ctx.lineTo(e.clientX, e.clientY);
+    ctx.lineTo(e.layerX, e.layerY); 
     ctx.stroke();
     ctx.beginPath();
-    ctx.moveTo(e.clientX, e.clientY);
+    ctx.moveTo(e.layerX, e.layerY);
   }
 
   clearButton.addEventListener("click", () =>
