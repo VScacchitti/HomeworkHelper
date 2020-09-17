@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework Helper</title>
-    
+    <!-- Link to Style Sheet-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/home-favicon.ico" type="image/x-icon">
     <!-- Link to Materialize Icons and CSS-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Link to Style Sheet-->
-    <link rel="stylesheet" href="style.css">
     
-    <link rel="shortcut icon" href="assets/home-favicon.ico" type="image/x-icon">
+    
+    
 
 </head>
 <body>
     <div class="index-overlay"></div>
         <!-- Materialize Nav Bar -->
         <div class="container">
-            <div class="fixed-action-btn top">
+            <div class="fixed-action-btn">
                 <a class="btn-floating btn-large deep-orange accent-3">
                   <i class="large material-icons">apps</i>
                 </a>
@@ -28,8 +29,8 @@
                   <li><a href="english.html" class="btn-floating teal accent-4"><i class="material-icons">spellcheck</i></a></li>
                   <li><a href="index.html" class="btn-floating orange"><i class="material-icons">home</i></a></li>
                 </ul>
-              </div>
             </div>
+        </div>
         <!-- End Materialize Nav Bar -->
 
         <div class="welcome">
@@ -77,14 +78,22 @@
         </div>
         <!-- End Calendar Section -->
 
-    <!-- Link to Materialize Javascript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- Link to jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Link to Moment.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    
     <!-- Link to Javascript file -->
     <script type="text/javascript" src="script.js"></script>
+     <!-- Link to jQuery Library -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+     <script>
+        $(document).ready(function(){
+            $('.fixed-action-btn').floatingActionButton();
+        });
+    </script>
+    
 
 </body>
 </html>
