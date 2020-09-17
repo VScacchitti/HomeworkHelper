@@ -1,12 +1,9 @@
-/* Nav Transition*/
-  // $(".burger").on("click", ()=>{
-  //   $(".nav").toggleClass("nav-active");
-  // });
-/* End Nav Transition*/
+/* Initialize Materialize */
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.fixed-action-btn');
   var instances = M.FloatingActionButton.init(elems, {
-    direction: 'right'
+      direction: 'right',
+      hoverEnabled: false
   });
 });
 
