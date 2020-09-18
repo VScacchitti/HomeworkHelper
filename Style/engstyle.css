@@ -1,45 +1,21 @@
-* {
-  max-width: 500px;
+#englishStuff {
   margin: auto;
-}
-#englishMainContent {
-  position: fixed;
-  display: flex;
-}
+  max-width: 800px;
 
-
+}
 .form-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-}
 
 
 .english-form {
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  height: flex;
-  margin: auto auto;
-
   /* I left the background blue so you know where to change it */
   background: rgb(247, 32, 68);
 }
-.title {
-  text-align: center;
-  border-style: dotted;
-  border-color: purple;
-  
-}
 #english-tile {
-  display: flex;
-  margin: 0 auto;
+
 }
 #english-body {
-  display: block;
-  margin: 0 auto;
-  height: 100%;
-  max-width: 100%;
+min-height: 700px;
+
+#grammar {
+
 }

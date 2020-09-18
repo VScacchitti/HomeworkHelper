@@ -2,6 +2,8 @@ $(document).ready(function () {
   console.log("test");
 
   var word = document.getElementById("input").innerText;
+
+
   //Dictionary API
   var settings = {
     async: true,
@@ -21,6 +23,9 @@ $(document).ready(function () {
     console.log(definition);
     $("#dictionary").append("<p>" + definition + "</p>");
   });
+
+
+
   //GrammerBot API
   var settings2 = {
     async: true,
@@ -41,5 +46,6 @@ $(document).ready(function () {
   $.ajax(settings2).done(function (response) {
     console.log(settings2.data.text);
     console.log(response.matches);
+    $("#grammar").append("<p>" + definition + "</p>");
   });
 });
