@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background: url(../Assets/galaxy.jpg);
+    background: url(../Assets/galaxy.jpg); /* https://wallpaperaccess.com/4k-ultra-hd-galaxy */
     background-size: cover;
     background-position: center;
 }
