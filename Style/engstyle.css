@@ -1,3 +1,9 @@
+#englishMainContent {
+  position: fixed;
+  display: flex;
+}
+
+
 .form-wrapper {
   display: flex;
   flex-direction: column;
@@ -5,18 +11,23 @@
   align-items: center;
   justify-content: center;
 }
+
+
 .english-form {
-  position: relative;
   display: flex;
   flex-direction: column;
   width: 500px;
-  height: 500px;
+  height: flex;
   margin: auto auto;
+
   /* I left the background blue so you know where to change it */
-  background: blue;
+  background: rgb(247, 32, 68);
 }
 .title {
   text-align: center;
+  border-style: dotted;
+  border-color: purple;
+  
 }
 #english-tile {
   display: flex;
@@ -26,4 +37,5 @@
   display: block;
   margin: 0 auto;
   height: 100%;
+  max-width: 100%;
 }

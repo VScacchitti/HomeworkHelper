@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>English</title>
+
+    <!-- Link to JQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Link to NES style sheet-->
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+<link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+
+
+
     <!-- Link to Materialize Icons and CSS-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -17,6 +27,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./Style/engstyle.css">
 
+    <!-- Favicon-->
     <link rel="shortcut icon" href="assets/home-favicon.ico" type="image/x-icon">
 
   </head>
@@ -38,20 +49,44 @@
         </div>
     <!-- End Materialize Nav Bar -->
 
-      <div class="form-wrapper">
-        <form class="english-form">
+    <div id="englishMainContent">
+<div class="form-wrapper">
+        <form class="english-form  nes-form">
           <div class="title">
             <input type="text" placeholder="Title goes here" name="title" id="english-title"/>
+          </div>
+          <div class="english-form" id="englishDiv">
             <textarea name="englishBody" id="english-body" cols="30" rows="10" placeholder="Body goes here"></textarea>
-            <input type="submit" />
+            <input class="nes-btn" type="submit" />
           </div>
-          <div id="dictionary" class="dictionary">
-            <input type="text" placeholder="Get Definition" name="dictionary" id="input"/>
-          </div>
-        </form>
-      </div>
+     
+<div id="dictionary" class="dictionary">
+  <input
+    type="text"
+    placeholder="Get Definition"
+    name="dictionary"
+    id="input"
+/>
+<button id="dictionaryBrn" class="nes-btn">Get Definition</button>
+</div>
 
-    </div>
+<div id="grammar" class="dictionary">
+  <input 
+  type="text"
+  placeholder="Check Grammar"
+  name="Grammar"
+  id="inputGram"
+/>
+<button id="grammarBrn" class="nes-btn">Check Grammar</button>
+</div>
+
+</div> <!-- end of form wrapper-->
+</div> <!-- end of englishMainContent-->
+
+
+
+
+
 
     <!-- Link to Javascript file -->
     <script type="text/javascript" src="script.js"></script>
