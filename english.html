@@ -2,8 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>English</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>English</title>
+
+<!-- Link to NES style sheet-->
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+<link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+
+    <!-- Link to JQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
     <!-- Link to Materialize Icons and CSS-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -17,11 +27,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./Style/engstyle.css">
 
+    <!-- Favicon-->
     <link rel="shortcut icon" href="assets/home-favicon.ico" type="image/x-icon">
 
   </head>
-  <body>
-    <div class="english-wrapper">
+  <body class="nes-pointer">
+   
+
       <!-- Materialize Nav Bar -->
       <div class="container">
         <div class="fixed-action-btn top">
@@ -38,20 +50,57 @@
         </div>
     <!-- End Materialize Nav Bar -->
 
-      <div class="form-wrapper">
-        <form class="english-form">
-          <div class="title">
-            <input type="text" placeholder="Title goes here" name="title" id="english-title"/>
-            <textarea name="englishBody" id="english-body" cols="30" rows="10" placeholder="Body goes here"></textarea>
-            <input type="submit" />
-          </div>
-          <div id="dictionary" class="dictionary">
-            <input type="text" placeholder="Get Definition" name="dictionary" id="input"/>
-          </div>
-        </form>
-      </div>
 
-    </div>
+
+<div id="englishStuff" class="form-wrapper nes-container is-rounded with-title">
+
+</p class="title"> Welcome to the English page! </p>
+
+
+
+        <form class="english-form nes-container">
+          <div class="title nes-container">
+            <input type="text" placeholder="Write your title here!" name="title" id="english-title"/>
+          </div>
+          <div class="english-form" id="englishDiv">
+            <textarea  class="nes-textarea" name="englishBody" 
+            id="english-body"  placeholder="Write your body text here!"></textarea>
+            <input class="nes-btn" type="submit" />
+          </div>
+     
+        <!-- Grammar Section-->
+
+
+
+  <div id="grammar" class="dictionary nes-field">
+  <!-- link this to the main text area instead so it checks their documents grammar. 
+
+    <input 
+  type="text"
+  placeholder="Check Grammar"
+  name="Grammar"
+  id="inputGram"
+  class="nes-input"
+/> -->
+<button id="grammarBrn" class="nes-btn">Check Grammar</button>
+</div>
+
+          <!-- Dictionary Section -->
+<div id="dictionary" class="nes-field nes-container">
+  <input
+    type="text"
+    placeholder="Enter word here"
+    name="dictionary"
+    id="input"
+    class="nes-input"
+/>
+<button id="dictionaryBrn" class="nes-btn">Get Definition</button>
+</div>
+
+
+</div> <!-- end of form wrapper-->
+
+
 
     <!-- Link to Javascript file -->
     <script type="text/javascript" src="script.js"></script>
