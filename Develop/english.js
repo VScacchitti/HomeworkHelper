@@ -1,14 +1,13 @@
 $(document).ready(function () {
   console.log("test");
 
-  var word = $("#dictionary").val();
-  var englishText = $("english-body").val();
-
+  var word = document.getElementById("input").innerText;
+  //Dictionary API
   var settings = {
     async: true,
     crossDomain: true,
     url:
-      "https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry=" +
+      "https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry=word" +
       word,
     method: "GET",
     headers: {
@@ -18,12 +17,11 @@ $(document).ready(function () {
   };
 
   $.ajax(settings).done(function (response) {
-    console.log(response.meaning);
-
-    var definitiion = response.meaning;
-    $("#Test").append("<p>" + definitiion + "</p>");
+    var definition = JSON.stringify(response.meaning);
+    console.log(definition);
+    $("#dictionary").append("<p>" + definition + "</p>");
   });
-
+  //GrammerBot API
   var settings2 = {
     async: true,
     crossDomain: true,
@@ -36,7 +34,7 @@ $(document).ready(function () {
     },
     data: {
       language: "en-US",
-      text: englishText,
+      text: "i have a dog",
     },
   };
 

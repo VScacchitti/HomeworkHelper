@@ -4,59 +4,12 @@
   box-sizing: border-box;
 }
 
-/* Nav Bar */
-.burger{
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  cursor: pointer;
-  z-index: 2;
-}
-.burger div{
-  height: 5px;
-  width: 30px;
-  background: blue;
-  margin-bottom: 5px;
-  z-index: 2;
-}
-.nav{
-  position: absolute;
-  top: 60px;
-  left: 30px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  background: black;
-  transform: translateX(-150%);
-  transition: transform 0.5s ease-in;
-  z-index:2;
-}
-.nav-active{
-  position: absolute;
-  top: 60px;
-  left: 30px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  background: black;
-  transform: translateX(0%);
-  z-index:2;
-}
-.nav li,
-.nav-active li{
-  list-style: none;
-  text-decoration: none;
-  color: white;
-  z-index: 2;
-}
-/* End Nav Bar */
-
 .draw-container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 50px;
+  position: relative;
 }
 canvas {
   padding: 0;

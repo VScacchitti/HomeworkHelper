@@ -4,30 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Draw</title>
-    <!-- Link to Mini CSS-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
-    <link rel="stylesheet" href="draw.css">
+    <!-- Link to Materialize Icons and CSS-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Link to Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./Style/draw.css">
+
+    <link rel="shortcut icon" href="assets/art-favicon.ico" type="image/x-icon">
+
   </head>
   <body>
-    <!-- Nav Bar -->
-    <div class="burger">
-      <div></div>
-      <div></div>
-      <div></div>
-  </div>
-  <nav class="nav">
-      <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./math.html">Math</a></li>
-          <li><a href="./english.html">English</a></li>
-          <li><a href="./draw.html">Draw</a></li>
-      </ul>
-  </nav>
-  <!-- End Nav Bar -->
+    <!-- Materialize Nav Bar -->
+    <div class="container">
+      <div class="fixed-action-btn top">
+          <a class="btn-floating btn-large deep-orange accent-3">
+            <i class="large material-icons">apps</i>
+          </a>
+          <ul>
+            <li><a href="draw.html" class="btn-floating purple darken-1"><i class="material-icons">brush</i></a></li>
+            <li><a href="math.html" class="btn-floating blue darken-1"><i class="material-icons">exposure</i></a></li>
+            <li><a href="english.html" class="btn-floating teal accent-4"><i class="material-icons">spellcheck</i></a></li>
+            <li><a href="index.html" class="btn-floating orange"><i class="material-icons">home</i></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- End Materialize Nav Bar -->
 
-    <div class="draw-container">
+    <div>
         <!--Canvas elements-->
-        <canvas id="canvas" width="800" height="600"></canvas>
+        <canvas  class="draw-container" id="canvas" width="800" height="600"></canvas>
         <!--Button/Lable Elements-->
   
           <div class="controls">
@@ -41,9 +47,23 @@
             <label id="clearButton"><button id="clear">X</button> Clear</label>
           </div>
     </div>
-    <!-- Link to jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <!-- Link to Javascript file -->
-    <script type="text/javascript" src="draw.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="./Develop/draw.js"></script>
+     <!-- Link to jQuery Library -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+     <!-- Initialize Materialize Navbar -->
+     <script>
+        $(document).ready(function(){
+            $('.fixed-action-btn').floatingActionButton();
+        });
+    </script>
+
+
   </body>
 </html>
