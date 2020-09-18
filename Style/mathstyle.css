@@ -3,25 +3,27 @@
     padding: 0;
     box-sizing: border-box;
 }
-.math-wrapper {
-    display: flex;
+body{
+    background: url(../Assets/galaxy.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.math-wrapper{
     height: 100vh;
-    justify-content: center;
-    align-items: center;
 }
 .calculator {
     display: flex;
     justify-content: center;
-    background: blue;
+    margin: 15% auto;
+    background: black;
+    padding: 25px 25px 0 25px;
+    width: 30%;
+    min-width: 237px;
 }
 
 /* Calculator Styling */
-.card {
-    background-color: black;
-}
-.card-header {
-    background-color: black;
-    color: #a45fd3;
+.btn{
+    border-radius: 10px;
 }
 #resultbox{
     margin: 0 auto;
@@ -32,6 +34,7 @@
     background: white;
     font-size: 20px;
     font-weight: 500;
+    border-radius: 5px;
 }
 .result-text{
     color: #04d4df;
