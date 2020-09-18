@@ -30,69 +30,60 @@
             <li><a href="english.html" class="btn-floating teal accent-4"><i class="material-icons">spellcheck</i></a></li>
             <li><a href="index.html" class="btn-floating orange"><i class="material-icons">home</i></a></li>
           </ul>
-        </div>
       </div>
+    </div>
       <!-- End Materialize Nav Bar -->
 
       <div class="container calculator">
         <!-- Calculator Card -->
-        <div class="card">
-          <div class="card-header text-center">
-              <div id="resultbox">123</div>
-          </div>
-          <div class="card-body text-center">
-            <button id="button-1" class="btn number" value="1"><span>1</span></button>
-            <button id="button-2" class="btn number" value="2"><span>2</span></button>
-            <button id="button-3" class="btn number" value="3"><span>3</span></button>
-            <button id="button-plus" class="btn operator" value="plus"><span>+</span></button>
-            <br><br>
-            <button id="button-4" class="btn number" value="4"><span>4</span></button>
-            <button id="button-5" class="btn number" value="5"><span>5</span></button>
-            <button id="button-6" class="btn number" value="6"><span>6</span></button>
-            <button id="button-minus" class="btn operator" value="minus"><span>&minus;</span></button>
-            <br><br>
-            <button id="button-7" class="btn number" value="7"><span>7</span></button>
-            <button id="button-8" class="btn number" value="8"><span>8</span></button>
-            <button id="button-9" class="btn number" value="9"><span>9</span></button>
-            <button id="button-multiply" class="btn operator" value="times"><span>&times;</span></button>
-            <br><br>
-            <button id="button-0" class="btn number" value="0"><span>0</span></button>
-            <button id="button-divide" class="btn operator" value="divide"><span>&divide;</span></button>
-            <button id="button-power" class="btn operator" value="power"><span>^</span></button>
-            <button id="button-equal" class="btn equal" value="equals"><span>=</span></button>
-            <br><br>
-            <button id="button-clear" class="btn btn-dark clear" value="clear"><span>clear</span></button>
-          </div>
-        </div>
-      <!-- Result Card -->
-      <div class="col">
-        <div class="card">
-          <h3 class="card-header text-center result-text">Result</h3>
-          <div class="card-body">
-            <h1 id="first-number"></h1>
-            <h1 id="operator"></h1>
-            <h1 id="second-number"></h1>
-            <hr>
-            <h1 id="result"></h1>
-          </div>
+        <div class="row">
+          <div class class="col">
+            <div class="row"><!-- result row -->
+                <div id="resultbox"></div>
+            </div>
+            <div class="row">
+              <button id="button-1" class="btn number" value="1"><span>1</span></button>
+              <button id="button-2" class="btn number" value="2"><span>2</span></button>
+              <button id="button-3" class="btn number" value="3"><span>3</span></button>
+              <button id="button-plus" class="btn operator" value="plus"><span>+</span></button>
+            </div>
+            <div class="row">
+              <button id="button-4" class="btn number" value="4"><span>4</span></button>
+              <button id="button-5" class="btn number" value="5"><span>5</span></button>
+              <button id="button-6" class="btn number" value="6"><span>6</span></button>
+              <button id="button-minus" class="btn operator" value="minus"><span>&minus;</span></button>
+            </div>
+            <div class="row">
+              <button id="button-7" class="btn number" value="7"><span>7</span></button>
+              <button id="button-8" class="btn number" value="8"><span>8</span></button>
+              <button id="button-9" class="btn number" value="9"><span>9</span></button>
+              <button id="button-multiply" class="btn operator" value="times"><span>&times;</span></button>
+            </div>
+            <div class="row">
+              <button id="button-0" class="btn number" value="0"><span>0</span></button>
+              <button id="button-divide" class="btn operator" value="divide"><span>&divide;</span></button>
+              <button id="button-power" class="btn operator" value="power"><span>^</span></button>
+              <button id="button-equal" class="btn equal" value="equals"><span>=</span></button>
+            </div>
+            <div class="row">
+              <button id="button-clear" class="btn btn-dark clear" value="clear"><span>clear</span></button>
+            </div>
+          </div><!-- end col -->
         </div>
       </div>
 
     </div>
-    </div>
 
-    
+    <!-- Link to jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Link to Javascript file -->
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="./Develop/math.js"></script>
-     <!-- Link to jQuery Library -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-     <!-- Compiled and minified JavaScript -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Link to Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-     <!-- Initialize Materialize Navbar -->
-     <script>
+    <!-- Initialize Materialize Navbar -->
+    <script>
         $(document).ready(function(){
             $('.fixed-action-btn').floatingActionButton();
         });

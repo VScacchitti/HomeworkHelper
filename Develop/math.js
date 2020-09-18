@@ -16,7 +16,7 @@
     isOperatorChosen = false;
     isCalculated = false;
 
-    $("#first-number, #second-number, #operator, #result").empty();
+    $("#resultbox").empty();
   }
 
   $(".number").on("click", function() {
@@ -26,7 +26,7 @@
     // If operator is chosen, we should be writing the secondNumber, otherwise, the firstNumber
     if (isOperatorChosen) {
       secondNumber += $(this).val();
-      $("#second-number").text(secondNumber);
+      $("#resultbox").text(secondNumber);
     }
     else {
       firstNumber += $(this).val();
@@ -73,7 +73,7 @@
     else if (operator === "power") {
       result = Math.pow(firstNumber, secondNumber);
     }
-    $("#result").text(result);
+    $("#resultbox").text(result);
 
   });
   $(".clear").on("click", function() {
