@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     
     
 
@@ -33,6 +34,7 @@
         </div>
         <!-- End Materialize Nav Bar -->
 
+        <div class="shell">
         <div class="welcome">
             <div class="name">
                 <h1>Welcome!</h1>
@@ -47,7 +49,7 @@
             </div>
         </div>
         <!-- Calendar Section -->
-        <div class="container calendar-wrapper">
+        <!-- <div class="container calendar-wrapper">
             <div class="row calendar">
                 <div class="col-sm-2 weekdays">
                     <div class="day">Monday</div>
@@ -75,8 +77,48 @@
                     <button class="saveBtn">Save</button>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- End Calendar Section -->
+
+
+        <!-- Swiper -->
+        <div class="container calendar-wrapper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide z-depth-3 weekdays">
+                    <div class="day">Monday</div>
+                    <textarea class="description" id="day0"></textarea>
+                    <button class="btn waves-effect waves-yellow saveBtn">Save</button>
+                </div>
+                <div class="swiper-slide z-depth-3 weekdays">
+                    <div class="day">Tuesday</div>
+                    <textarea class="description" id="day1"></textarea>
+                    <button class="btn waves-effect waves-yellow  saveBtn">Save</button>
+                </div>
+                <div class="swiper-slide z-depth-3 weekdays">
+                    <div class="day">Wednesday</div>
+                    <textarea class="description" id="day2"></textarea>
+                    <button class="btn waves-effect waves-yellow  saveBtn">Save</button>
+                </div>
+                <div class="swiper-slide z-depth-3 weekdays">
+                    <div class="day">Thursday</div>
+                    <textarea class="description" id="day3"></textarea>
+                    <button class="btn waves-effect waves-yellow  saveBtn">Save</button>
+                </div>
+                <div class="swiper-slide z-depth-3 weekdays">
+                    <div class="day">Friday</div>
+                    <textarea class="description" id="day4"></textarea>
+                    <button class="btn waves-effect waves-yellow  saveBtn">Save</button>
+                </div>
+                </div>
+                <!-- Add Arrows -->
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+            </div>
+            </div>
+        </div>
+        <!-- End Swiper -->
+    </div>
 
 
     <!-- Link to jQuery Library -->
@@ -88,11 +130,24 @@
      <!-- Link to Materialize Javascript -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+     
      <script>
         $(document).ready(function(){
             $('.fixed-action-btn').floatingActionButton();
         });
     </script>
+
+    <!-- Initialize Swiper -->
+  <script>
+     var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
     
 
 </body>

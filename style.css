@@ -4,13 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Materialize Nav Bar */
-/* .fixed-action-btn{
-    top: 30px;
-    left:30px;
-} */
-/* End Materialize Nav Bar */
-
 /* Index Only */
 .index-overlay{
     position: absolute;
@@ -68,10 +61,6 @@
     font-size: 20px;
     color: #fff;
 }
-.calendar-wrapper{
-    display: flex;
-    position: relative;
-}
 .calendar{
     display: flex;
     position: absolute;
@@ -89,27 +78,65 @@
 }
 .weekdays textarea{
     border: none;
-    border-radius: 10px;
+    outline: none;
+    border-radius: 5px;
     margin-bottom: 10px;
     width: 100%;
     height: 150px;
+    background: white;
+    margin: 5px;
+    padding: 5px;
+    max-width: 185px;
 }
 .day{
     padding: 10px;
     color: #fff;
     font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
 }
 
 
-/* display days in 1 column on smaller screens */
-@media screen and (max-width: 995px){
-    .calendar-wrapper{
-        margin: 0 auto;
-    }
-    .calendar{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-    }
+.swiper-container{ /* Calendar */
+    background: #62b1aa;
+    border-radius: 10px;
+}
+.swiper-slide{ /* Calendar Days */
+    max-width: 205px;
+    background: #6cc4bc;
+    border-radius: 10px;
+    margin: 25px;
+    padding: 10px;
+}
+
+.btn{
+    width: 80%;
+    margin: 0 auto;
 }
 /* End Calendar Styling */
+
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3) { 
+        .welcome h5{
+            margin: 5px;
+        }
+        .week-of span{
+            display: none;
+        }
+        #week-range{
+            font-size: 24px ;
+        }
+        .swiper-slide{
+            max-width: 250px;
+        }
+        .weekdays textarea{
+            margin: 0 auto;
+        }
+        .btn{
+            margin-top: 5px;
+            width: 150px;
+        }
+
+    }
