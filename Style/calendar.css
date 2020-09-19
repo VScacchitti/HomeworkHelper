@@ -1,0 +1,96 @@
+/* Calendar Styling */
+.week-of-wrapper{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.week-of{
+    margin-top: 20px;
+    padding: 20px;
+    color: #6cc4bc;
+}
+.week-of span{
+    font-size: 20px;
+    color: #fff;
+}
+.calendar{
+    display: flex;
+    position: absolute;
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    background: #6cc4bc;
+    border-radius: 10px;
+}
+.weekdays{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 150px;
+}
+.weekdays textarea{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 150px;
+    background: white;
+    margin: 5px;
+    padding: 5px;
+    max-width: 185px;
+}
+.day{
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+
+.swiper-container{ /* Calendar */
+    background: #62b1aa;
+    border-radius: 10px;
+}
+.swiper-slide{ /* Calendar Days */
+    max-width: 205px;
+    background: #6cc4bc;
+    border-radius: 10px;
+    margin: 25px;
+    padding: 10px;
+}
+
+.btn{
+    width: 80%;
+    margin: 0 auto;
+}
+/* End Calendar Styling */
+
+/* Calendar sizing on mobile */
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3) { 
+        .welcome h5{
+            margin: 5px;
+        }
+        .week-of span{
+            display: none;
+        }
+        #week-range{
+            font-size: 24px ;
+        }
+        .swiper-slide{
+            max-width: 250px;
+        }
+        .weekdays textarea{
+            margin: 0 auto;
+        }
+        .btn{
+            margin-top: 5px;
+            width: 150px;
+        }
+
+    }
+/* End Calendar sizing on mobile */
