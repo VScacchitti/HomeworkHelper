@@ -8,7 +8,7 @@ $(document).ready(function () {
     event.preventDefault();
     var searchWord = inputVal.val();
     console.log(searchWord);
-    //API Call
+    //API Call for Dictionary Button
     var settings = {
       async: true,
       crossDomain: true,
@@ -32,14 +32,15 @@ $(document).ready(function () {
     });
   });
 
-  //GrammerBot API
+  //GrammarBot API
   var englishbodyVal = $("#inputgram");
 
-  $("#grammerBtn").on("click", function (event) {
+  $("#grammarBtn").on("click", function (event) {
     event.preventDefault();
     var textVal = englishbodyVal.val();
     console.log(textVal);
 
+    // API Call for Gramar Button
     var settings2 = {
       async: true,
       crossDomain: true,
@@ -58,13 +59,14 @@ $(document).ready(function () {
 
     $.ajax(settings2).done(function (response) {
       console.log(settings2.data.text);
-      var results = JSON.stringify(response.matches);
-      var displayGrammer = [];
+      var results = response.matches[0].message;
       console.log(results);
-      displayGrammer.push(results);
-      console.log(displayGrammer);
-
-      $("#grammer").append("<p>" + displayGrammer + "</p>");
+      //console.log(displayGrammar);
+    //  var corrections = JSON.stringify(displayGrammar);
+    //  var displayCorrections = [];
+   //   console.log(corrections);
+    //  displayCorrections.push(corrections);
+      $("#grammar").append("<p>" + results + "</p>");
     });
   });
 });
