@@ -8,8 +8,7 @@ Team Members:
 >Rebecca  
 
 
- >Homework Planner
-        
+        [Click here to use the homework planner](https://vscacchitti.github.io/HomeworkHelper/)
         
 ## Description
     >A digital trapper keeper; This website has 4 pages.   
