@@ -23,12 +23,43 @@ $(document).ready(function () {
     };
 
     $.ajax(settings).done(function (response) {
-      var definition = JSON.stringify(response.meaning);
-      console.log(definition);
+      console.log(response.meaning.noun);
+      console.log(response.meaning.verb);
+      console.log(response.meaning.adverb);
+      console.log(response.meaning.adjective);
+
+      //response varibales
+      var noun = JSON.stringify(response.meaning.noun);
+      var verb = JSON.stringify(response.meaning.verb);
+      var adverb = JSON.stringify(response.meaning.adverb);
+      var adjective = JSON.stringify(response.meaning.adjective);
+
+      //finding what to append
       var definitionDisplay = [];
-      definitionDisplay.push(definition);
+
+      if (noun && verb && adverb && adjective) {
+        definitionDisplay.push(noun, verb, adverb, adjective);
+      } else if (noun && verb && adverb && adjective === "") {
+        definitionDisplay.push(noun, verb, adverb);
+      } else if (noun && verb && adverb === "" && adjective === "") {
+        definitionDisplay.push(noun, verb);
+      } else if (noun) {
+        definitionDisplay.push(noun);
+      } else if (verb) {
+        definitionDisplay.push(verb);
+      } else if (adverb) {
+        definitionDisplay.push(adverb);
+      } else {
+        definitionDisplay.push(adjective);
+      }
+
+      //definitionDisplay.push(noun, verb, adverb, adjective);
       console.log(definitionDisplay);
-      $("#dictionary").append("<p>" + definitionDisplay + "</p>");
+      //For loop iterating through definition array that was created above
+      for (let i = 0; i < definitionDisplay.length; i++) {
+        console.log(definitionDisplay[i]);
+        $("#dictionary").append("<p>" + definitionDisplay[i] + "</p>");
+      }
     });
   });
 
@@ -62,10 +93,10 @@ $(document).ready(function () {
       var results = response.matches[0].message;
       console.log(results);
       //console.log(displayGrammar);
-    //  var corrections = JSON.stringify(displayGrammar);
-    //  var displayCorrections = [];
-   //   console.log(corrections);
-    //  displayCorrections.push(corrections);
+      //  var corrections = JSON.stringify(displayGrammar);
+      //  var displayCorrections = [];
+      //   console.log(corrections);
+      //  displayCorrections.push(corrections);
       $("#grammar").append("<p>" + results + "</p>");
     });
   });
