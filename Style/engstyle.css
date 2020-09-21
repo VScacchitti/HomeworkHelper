@@ -1,23 +1,30 @@
 #englishStuff {
   margin: auto;
   max-width: 800px;
-
 }
 .english-form {
   /* I left the background blue so you know where to change it */
   background: #6e4fdf;
 }
+
 #english-body {
-min-height: 700px;
+  min-height: 500px;
+}
+
+.english-title {
+  width: 90px; height: 390px; border: 1px solid #999999; padding: 5px;
+
 }
 
 /* Cloud */ 
 body {
+  width: 100vw;
+  height: 100vh;
   background: linear-gradient(165deg, #6e4fdf 0%, #4428a8 100%);
 
 /*   background: linear-gradient(165deg, #527785 0%, #527785 100%); */
   padding: 1%;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .cloud {
