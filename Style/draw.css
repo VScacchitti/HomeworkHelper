@@ -3,7 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body{
+  background: url(../Assets/art.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .draw-container{
   display: flex;
   flex-direction: column;
@@ -13,163 +17,75 @@
 }
 canvas {
   padding: 0;
-  margin: auto;
+  margin: 80px auto 20px;
   display: block;
-  width: 800px;
+  width: 600px;
+  background: white;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
 }
 #canvas {
   border: 1px solid black;
 }
 
-#clear {
+.control-box{
+  display: flex;
+}
+.controls {
+  margin: 0 auto;
+}
+
+#clearButton,
+#eraseButton,
+#blackButton,
+#blueButton,
+#greenButton,
+#redButton, 
+#yellowButton,
+#purpleButton {
+  margin: 8px;
+  font-size: 14px;
+}
+
+#clear,
+#erase, 
+#black,
+#green,
+#blue,
+#yellow,
+#red,
+#purple{
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   margin: auto;
   border: 1px solid black;
   font-size: 20px;
   color: white;
+  border-radius: 50%;
+}
+#clear {
   background-color: #e3242b;
 }
-
-#clearButton {
-  margin: 30px;
-}
-
-.controls {
-  margin: 30px 0;
-}
-
 #black {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin: auto;
-  border: 1px solid black;
-  font-size: 20px;
-  color: white;
   background-color: black;
 }
-
-#blackButton {
-  margin: 30px;
-}
-
 #erase {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin: auto;
-  border: 1px solid black;
-  font-size: 20px;
   color: black;
   background-color: white;
 }
-
-#eraseButton {
-  margin: 30px;
-}
-
 #blue {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin: auto;
-  border: 1px solid black;
-  font-size: 20px;
-  color: white;
   background-color: #287bff;
 }
-
-#blueButton {
-  margin: 30px;
-}
-
-#blue {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin: auto;
-  border: 1px solid black;
-  font-size: 20px;
-  color: white;
-  background-color: #287bff;
-}
-
-#blueButton {
-  margin: 30px;
-}
-
 #green {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin: auto;
-  border: 1px solid black;
-  font-size: 20px;
-  color: white;
   background-color: #13d50a;
 }
-
-#greenButton {
-  margin: 30px;
-}
-
 #red {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin: auto;
-  border: 1px solid black;
-  font-size: 20px;
-  color: white;
-  background-color: #ea1515;
-}
 
-#redButton {
-  margin: 30px;
+  background-color: #ea1515;
 }
 #yellow {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin: auto;
-  border: 1px solid black;
-  font-size: 20px;
-  color: white;
   background-color: #f8fb0b;
 }
-
-#yellowButton {
-  margin: 30px;
-}
-
 #purple {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin: auto;
-  border: 1px solid black;
-  font-size: 20px;
-  color: white;
   background-color: #ad0bfb;
-}
-
-#purpleButton {
-  margin: 30px;
-}
-
-#red {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin: auto;
-  border: 1px solid black;
-  font-size: 20px;
-  color: white;
-  background-color: #ea1515;
-}
-
-#redButton {
-  margin: 30px;
 }
