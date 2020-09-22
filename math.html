@@ -34,40 +34,46 @@
     </div>
       <!-- End Materialize Nav Bar -->
 
-      <div class="container calculator">
+      <div class="calculator">
         <!-- Calculator Card -->
         <div class="row">
           <div class class="col">
             <div class="row"><!-- result row -->
-                <div id="resultbox"></div>
+                <input id="resultbox" class = "calculator-display"></input>
             </div>
-            <div class="row">
-              <button id="button-1" class="btn number" value="1"><span>1</span></button>
-              <button id="button-2" class="btn number" value="2"><span>2</span></button>
-              <button id="button-3" class="btn number" value="3"><span>3</span></button>
-              <button id="button-plus" class="btn operator" value="plus"><span>+</span></button>
+            <div class="calculator-keys">
+              <div class="row">
+                <button type="button" id="button-1" class="btn number" value="1"><span>1</span></button>
+                <button type="button" id="button-2" class="btn number" value="2"><span>2</span></button>
+                <button type="button" id="button-3" class="btn number" value="3"><span>3</span></button>
+                <button type="button"type=" id="button-plus" class="btn operator" value="+"><span>+</span></button>
+              </div>
+              <div class="row">
+                <button type="button" id="button-4" class="btn number" value="4"><span>4</span></button>
+                <button type="button" id="button-5" class="btn number" value="5"><span>5</span></button>
+                <button type="button" id="button-6" class="btn number" value="6"><span>6</span></button>
+                <button type="button" id="button-minus" class="btn operator" value="-"><span>&minus;</span></button>
+              </div>
+              <div class="row">
+                <button type="button" id="button-7" class="btn number" value="7"><span>7</span></button>
+                <button type="button" id="button-8" class="btn number" value="8"><span>8</span></button>
+                <button type="button" id="button-9" class="btn number" value="9"><span>9</span></button>
+                <button type="button" id="button-multiply" class="btn operator" value="*"><span>&times;</span></button>
+              </div>
+              <div class="row">
+                <button type="button" id="button-0" class="btn number" value="0"><span>0</span></button>
+                <button type="button" id="button-divide" class="btn operator" value="/"><span>&divide;</span></button>
+                <button type="button-decimal" class=" btn decimal" value="."><span>.</span></button>ß
+               
+                <button type="button" id="button-equal" class="btn equal" value="="><span>=</span></button>
+              </div>
+              <div class="row">
+               
+                <button type="button" id="button-clear" class="btn btn-dark clear" value="clear"><span>clear</span></button>
+              </div>
+
             </div>
-            <div class="row">
-              <button id="button-4" class="btn number" value="4"><span>4</span></button>
-              <button id="button-5" class="btn number" value="5"><span>5</span></button>
-              <button id="button-6" class="btn number" value="6"><span>6</span></button>
-              <button id="button-minus" class="btn operator" value="minus"><span>&minus;</span></button>
-            </div>
-            <div class="row">
-              <button id="button-7" class="btn number" value="7"><span>7</span></button>
-              <button id="button-8" class="btn number" value="8"><span>8</span></button>
-              <button id="button-9" class="btn number" value="9"><span>9</span></button>
-              <button id="button-multiply" class="btn operator" value="times"><span>&times;</span></button>
-            </div>
-            <div class="row">
-              <button id="button-0" class="btn number" value="0"><span>0</span></button>
-              <button id="button-divide" class="btn operator" value="divide"><span>&divide;</span></button>
-              <button id="button-power" class="btn operator" value="power"><span>^</span></button>
-              <button id="button-equal" class="btn equal" value="equals"><span>=</span></button>
-            </div>
-            <div class="row">
-              <button id="button-clear" class="btn btn-dark clear" value="clear"><span>clear</span></button>
-            </div>
+           
           </div><!-- end col -->
         </div>
       </div>
@@ -77,8 +83,9 @@
     <!-- Link to jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Link to Javascript file -->
-    <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="./Develop/math.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  
     <!-- Link to Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 

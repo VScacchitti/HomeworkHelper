@@ -1,84 +1,113 @@
 /* Calculator */
-  // Make our variables global to the runtime of our application
-  var firstNumber = 0;
-  var secondNumber = 0;
-  var operator = "";
-  var result = 0;
-  var isOperatorChosen = false;
-  var isCalculated = false;
+//Calculator Object
+const calculator = {
+  displayValue: "0",
+  firstOperand: null,
+  waitingForSecondOperand: false,
+  operator: null,
+};
 
-  // Use a function to initialize our calculator.
-  // This way when the user hits clear, we can guarantee a reset of the app.
-  function initializeCalculator() {
-    firstNumber = "";
-    secondNumber = "";
-    operator = "";
-    isOperatorChosen = false;
-    isCalculated = false;
+function inputDigit(digit) {
+  const { displayValue, waitingForSecondOperand } = calculator;
 
-    $("#resultbox").empty();
+  if (waitingForSecondOperand === true) {
+    calculator.displayValue = digit;
+    calculator.waitingForSecondOperand = false;
+  } else {
+    calculator.displayValue =
+      displayValue === "0" ? digit : displayValue + digit;
+  }
+}
+
+function inputDecimal(dot) {
+  if (calculator.waitingForSecondOperand === true) {
+    calculator.displayValue = "0.";
+    calculator.waitingForSecondOperand = false;
+    return;
   }
 
-  $(".number").on("click", function() {
-    if (isCalculated) {
-      return false;
-    }
-    // If operator is chosen, we should be writing the secondNumber, otherwise, the firstNumber
-    if (isOperatorChosen) {
-      secondNumber += $(this).val();
-      $("#resultbox").text(secondNumber);
-    }
-    else {
-      firstNumber += $(this).val();
-      $("#resultbox").text(firstNumber);
-    }
+  if (!calculator.displayValue.includes(dot)) {
+    calculator.displayValue += dot;
+  }
+}
 
-  });
+function handleOperator(nextOperator) {
+  const { firstOperand, displayValue, operator } = calculator;
+  const inputValue = parseFloat(displayValue);
 
-  $(".operator").on("click", function() {
-    if (!firstNumber || isCalculated) {
-      return false;
-    }
-    // Set isOperatorChosen to true so we start writing to secondNumber
-    isOperatorChosen = true;
-    // Store off the operator
-    operator = $(this).val();
-    // Set the HTML of the #operator to the text of what was clicked
-    $("#operator").text($(this).text());
-  });
-  $(".equal").on("click", function() {
-    // If we already clicked equal, don't do the calculation again
-    if (isCalculated) {
-      return false;
-    }
-    // Set isCalculated to true so that we don't get in a weird UI state by clicking buttons again
-    isCalculated = true;
-    // Use parseInt to convert our string representation of numbers into actual integers
-    firstNumber = parseInt(firstNumber);
-    secondNumber = parseInt(secondNumber);
-    // Based on the operator that was chosen.
-    // Then run the operation and set the HTML of the result of that operation
-    if (operator === "plus") {
-      result = firstNumber + secondNumber;
-    }
-    else if (operator === "minus") {
-      result = firstNumber - secondNumber;
-    }
-    else if (operator === "times") {
-      result = firstNumber * secondNumber;
-    }
-    else if (operator === "divide") {
-      result = firstNumber / secondNumber;
-    }
-    else if (operator === "power") {
-      result = Math.pow(firstNumber, secondNumber);
-    }
-    $("#resultbox").text(result);
+  if (operator && calculator.waitingForSecondOperand) {
+    calculator.operator = nextOperator;
+    return;
+  }
 
-  });
-  $(".clear").on("click", function() {
-    initializeCalculator();
-  });
+  if (firstOperand == null && !isNaN(inputValue)) {
+    calculator.firstOperand = inputValue;
+  } else if (operator) {
+    const result = calculate(firstOperand, inputValue, operator);
 
-initializeCalculator();
-/* End Calculator */
+    calculator.displayValue = `${parseFloat(result.toFixed(7))}`;
+    calculator.firstOperand = result;
+  }
+
+  calculator.waitingForSecondOperand = true;
+  calculator.operator = nextOperator;
+}
+
+function calculate(firstOperand, secondOperand, operator) {
+  if (operator === "+") {
+    return firstOperand + secondOperand;
+  } else if (operator === "-") {
+    return firstOperand - secondOperand;
+  } else if (operator === "*") {
+    return firstOperand * secondOperand;
+  } else if (operator === "/") {
+    return firstOperand / secondOperand;
+  }
+
+  return secondOperand;
+}
+
+function resetCalculator() {
+  calculator.displayValue = "0";
+  calculator.firstOperand = null;
+  calculator.waitingForSecondOperand = false;
+  calculator.operator = null;
+}
+
+function updateDisplay() {
+  const display = document.querySelector(".calculator-display");
+  display.value = calculator.displayValue;
+}
+
+updateDisplay();
+
+const keys = document.querySelector(".calculator-keys");
+keys.addEventListener("click", (event) => {
+  const { target } = event;
+  const { value } = target;
+  if (!target.matches("button")) {
+    return;
+  }
+
+  switch (value) {
+    case "+":
+    case "-":
+    case "*":
+    case "/":
+    case "=":
+      handleOperator(value);
+      break;
+    case ".":
+      inputDecimal(value);
+      break;
+    case "clear":
+      resetCalculator();
+      break;
+    default:
+      if (Number.isInteger(parseFloat(value))) {
+        inputDigit(value);
+      }
+  }
+
+  updateDisplay();
+});
