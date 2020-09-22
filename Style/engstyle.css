@@ -63,3 +63,14 @@ body {
 .hide {
   display: none;
 }
+
+#grammarClear {
+  padding: 6px;
+  margin-left: 360px;
+  margin-bottom: 8px;
+}
+
+#clearBtn {
+  padding: 6px;
+  margin-left: 350px;
+}
