@@ -98,16 +98,19 @@ seed="0"/>
   <div id="grammar" class="nes-field">
     <input
       type="text"
-      placeholder="Paste your sentence here!"
+      placeholder="Paste your sentence here and click the Check Grammar button for a hint!"
       
       id="inputgram"
     />
+    <div id="grammarDisplay" class="nes-field hide"></div>
     <button id="grammarBtn" class="nes-btn"> Check Grammar</button>
+    <button id="grammarClear" class="nes-btn">Clear</button>
   </div>
 
   
           <!-- Dictionary Section -->
-<div id="dictionary" class="nes-field nes-container">
+<div id="dictionary"class="nes-field nes-container" >
+  <div id="dictionaryDisplay" class="nes-field nes-container hide"></div>
   <input
     type="text"
     placeholder="Enter word here"
@@ -116,6 +119,7 @@ seed="0"/>
     class="nes-input"
 />
 <button id="dictionaryBtn" class="nes-btn">Get Definition</button>
+<button id="clearBtn" class="nes-btn">Clear</button>
 </div>
 
 

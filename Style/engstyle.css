@@ -8,21 +8,24 @@
 }
 
 #english-body {
-  min-height: 500px;
+  height: 400px;
+  width: 400px;
 }
 
 .english-title {
-  width: 90px; height: 390px; border: 1px solid #999999; padding: 5px;
-
+  width: 90px;
+  height: 390px;
+  border: 1px solid #999999;
+  padding: 5px;
 }
 
-/* Cloud */ 
+/* Cloud */
 body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(165deg, #6e4fdf 0%, #4428a8 100%);
 
-/*   background: linear-gradient(165deg, #527785 0%, #527785 100%); */
+  /*   background: linear-gradient(165deg, #527785 0%, #527785 100%); */
   padding: 1%;
   overflow: scroll;
 }
@@ -44,11 +47,19 @@ body {
 #cloud-mid {
   filter: url(#filter-mid);
   box-shadow: 300px 340px 70px -60px rgba(158, 168, 179, 0.5);
-    left: -25vw;
+  left: -25vw;
 }
 
 #cloud-front {
   filter: url(#filter-front);
   box-shadow: 300px 370px 60px -100px rgba(0, 0, 0, 0.3);
-    left: -25vw;
+  left: -25vw;
+}
+
+#grammarBtn {
+  margin-bottom: 20px;
+}
+
+.hide {
+  display: none;
 }

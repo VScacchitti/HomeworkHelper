@@ -2,10 +2,16 @@ $(document).ready(function () {
   console.log("test");
 
   var inputVal = $("#input");
+  //Function to clear definition
+  function clearDefinition() {
+    $("#dictionaryDisplay").empty();
+    $("#dictionaryDisplay").addClass("hide");
+  }
 
-  //Dictionary API
+  //Dictionary API on click
   $("#dictionaryBtn").on("click", function (event) {
     event.preventDefault();
+
     var searchWord = inputVal.val();
     console.log(searchWord);
     //API Call for Dictionary Button
@@ -29,42 +35,42 @@ $(document).ready(function () {
       console.log(response.meaning.adjective);
 
       //response varibales
-      var noun = JSON.stringify(response.meaning.noun);
+      var noun = JSON.stringify(response.meaning.noun).split("/n").join("/");
       var verb = JSON.stringify(response.meaning.verb);
       var adverb = JSON.stringify(response.meaning.adverb);
       var adjective = JSON.stringify(response.meaning.adjective);
 
-      //finding what to append
-      var definitionDisplay = [];
-
-      if (noun && verb && adverb && adjective) {
-        definitionDisplay.push(noun, verb, adverb, adjective);
-      } else if (noun && verb && adverb && adjective === "") {
-        definitionDisplay.push(noun, verb, adverb);
-      } else if (noun && verb && adverb === "" && adjective === "") {
-        definitionDisplay.push(noun, verb);
-      } else if (noun) {
-        definitionDisplay.push(noun);
-      } else if (verb) {
-        definitionDisplay.push(verb);
-      } else if (adverb) {
-        definitionDisplay.push(adverb);
-      } else {
-        definitionDisplay.push(adjective);
+      //function to print definition
+      function printDefinition() {
+        $("#dictionaryDisplay").removeClass("hide");
+        $("#dictionaryDisplay").append("<p id='noun'> Noun: " + noun + "</p>");
+        $("#dictionaryDisplay").append("<p id ='verb'> Verb: " + verb + "</p>");
+        $("#dictionaryDisplay").append(
+          "<p id ='adverb'> Adverb: " + adverb + "</p>"
+        );
+        $("#dictionaryDisplay").append(
+          "<p id ='adjective'> Adjective: " + adjective + "</p>"
+        );
       }
 
-      //definitionDisplay.push(noun, verb, adverb, adjective);
-      console.log(definitionDisplay);
-      //For loop iterating through definition array that was created above
-      for (let i = 0; i < definitionDisplay.length; i++) {
-        console.log(definitionDisplay[i]);
-        $("#dictionary").append("<p>" + definitionDisplay[i] + "</p>");
-      }
+      printDefinition();
+      // Clearing on click
+
+      $("#clearBtn").on("click", function (e) {
+        e.preventDefault();
+        clearDefinition();
+        console.log(clearDefinition);
+      });
     });
   });
 
   //GrammarBot API
   var englishbodyVal = $("#inputgram");
+
+  function clearGrammar() {
+    $("#grammarDisplay").empty();
+    $("#grammarDisplay").addClass("hide");
+  }
 
   $("#grammarBtn").on("click", function (event) {
     event.preventDefault();
@@ -92,12 +98,19 @@ $(document).ready(function () {
       console.log(settings2.data.text);
       var results = response.matches[0].message;
       console.log(results);
-      //console.log(displayGrammar);
-      //  var corrections = JSON.stringify(displayGrammar);
-      //  var displayCorrections = [];
-      //   console.log(corrections);
-      //  displayCorrections.push(corrections);
-      $("#grammar").append("<p>" + results + "</p>");
+
+      function printGrammar() {
+        $("#grammarDisplay").append("<p>" + results + "</p>");
+        $("#grammarDisplay").removeClass("hide");
+      }
+
+      printGrammar();
+
+      $("#grammarclear").on("click", function (e) {
+        e.preventDefault();
+        clearGrammar();
+        console.log(clearDefinition);
+      });
     });
   });
 });
