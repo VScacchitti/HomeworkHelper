@@ -9,7 +9,6 @@
 
 #english-body {
   height: 400px;
-  width: 400px;
 }
 
 .english-title {
@@ -73,4 +72,14 @@ body {
 #clearBtn {
   padding: 6px;
   margin-left: 350px;
+}
+
+@media only screen and (device-width: 375px) {
+  #clearBtn {
+    margin-left: 20px;
+  }
+
+  #grammarClear {
+    margin-left: 20px;
+  }
 }
